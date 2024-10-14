@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q9</title>
+</head>
+
+<body>
+    <header class="question">
+        <h1>Q:9</h1>
+        <h1>Create a Form</h1>
+        <hr>
+    </header>
+    <div class="answer">
+        <h1 class="form-heading">Feedback Form</h1>
+        <form class="feedback-form">
+            <label for="fb-type">Feedback Type:
+                <select name="fb-type" id="fb-type">
+                    <option value="compliment">Compliment</option>
+                    <option value="complaint">Complaint</option>
+                    <option value="suggestion">Suggestion</option>
+                    <option value="observation">Observation</option>
+                </select>
+            </label>
+
+            <br>
+
+            <label for="fb-msg">Message:
+                <input type="text">
+            </label>
+
+            <br>
+
+            <label for="fb-rating">Website Rating:
+                <input type="radio" id="5" name="fb-rating" value="5">
+                <label for="5">Excellent</label>
+                <input type="radio" id="4" name="fb-rating" value="4">
+                <label for="4">Good</label>
+                <input type="radio" id="3" name="fb-rating" value="3">
+                <label for="3">Average</label>
+                <input type="radio" id="2" name="fb-rating" value="2">
+                <label for="2">Poor</label>
+                <input type="radio" id="1" name="fb-rating" value="1">
+                <label for="1">Bad</label>
+            </label>
+
+            <br>
+
+            <label for="fb-age">Age (10-100):
+                <input type="number" min="10" max="100"><br>
+            </label>
+
+            <br>
+
+            <label for="fb-email">Email:
+                <input type="email" required>
+            </label>
+
+            <br>
+
+            <label for="fb-password">Password (min. 8 characters):
+                <input type="password" minlength="8">
+            </label>
+
+            <br>
+
+            <label for="fb-webURL">Website URL (optional):
+                <input type="text">
+            </label>
+
+            <br>
+
+            <input type="checkbox">
+            <label for="tnc"> I agree to the terms and conditions</label>
+
+            <br>
+
+            <input type="submit" value="Submit" class="submit-btn">
+        </form>
+    </div>
+</body>
+
+</html>

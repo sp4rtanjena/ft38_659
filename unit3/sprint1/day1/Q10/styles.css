@@ -1,0 +1,27 @@
+header {
+    display: flex;
+}
+
+.logo {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-logo {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #000000;
+    margin: 20px;
+}
+
+th,
+td {
+    border: 1px solid #000000;
+    padding: 10px;
+}

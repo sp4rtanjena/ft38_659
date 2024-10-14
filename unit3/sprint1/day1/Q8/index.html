@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Q8</title>
+
+</head>
+
+<body>
+    <div id="question">
+        <h1>Q:6</h1>
+        <h3>Problem Statement</h3>
+        <p>Create a table in HTML that displays information about products, including the quantity, price per unit, and
+            a
+            description.
+            The table should also include a total price column that calculates the total price for each product.
+        </p>
+        <ul>
+            <li>The table should have the following columns: "Product Name", "Quantity", "Price per Unit",
+                "Description",
+                and a "Total Price".</li>
+            <li>The "Total Price" column should be calculated as the product of the "Quantity" and "Price per Unit"
+                columns.
+            </li>
+            <li>The "Total Price" column should span across two columns.</li>
+            <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2024-09-10/Screenshot%202024-09-10%20185459_183068.png"
+                alt="practice_img">
+        </ul>
+    </div>
+    <br>
+    <div id="answer">
+        <h3>Answer</h3>
+        <table id="products">
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price per Unit</th>
+                <th>Description</th>
+                <th colspan="2">Total Price</th>
+            </tr>
+            <tr>
+                <td>Product1</td>
+                <td>2</td>
+                <td>10</td>
+                <td>Product 1 details</td>
+                <td id="total1"></td>
+            </tr>
+            <tr>
+                <td>Product2</td>
+                <td>3</td>
+                <td>20</td>
+                <td>Product 2 details</td>
+                <td id="total2"></td>
+            </tr>
+            <tr>
+                <td>Product3</td>
+                <td>4</td>
+                <td>6</td>
+                <td>Product 3 details</td>
+                <td id="total3"></td>
+            </tr>
+            <tr>
+                <td>Product4</td>
+                <td>50</td>
+                <td>2</td>
+                <td>Product 4 details</td>
+                <td id="total4"></td>
+            </tr>
+            <tr>
+                <td>Product5</td>
+                <td>500</td>
+                <td>1</td>
+                <td>Product 5 details</td>
+                <td id="total5"></td>
+            </tr>
+            <tr>
+                <td colspan="4">Sum</td>
+                <td id="sum"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
