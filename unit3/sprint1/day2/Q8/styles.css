@@ -1,0 +1,55 @@
+body {
+    background-image: radial-gradient(circle, white, red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.form-heading {
+    display: flex;
+    justify-content: center;
+}
+
+.feedback-form {
+    width: 500px;
+    height: 500px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.feedback-form select {
+    width: 470px;
+    height: 30px;
+    font-size: 17px;
+}
+
+.feedback-form label {
+    width: 470px;
+    height: 30px;
+    font-size: 17px;
+}
+
+.submit-btn {
+    padding: 5px 10px;
+    font-weight: 0;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: #4CB050;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+label {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding-bottom: 10px;
+}

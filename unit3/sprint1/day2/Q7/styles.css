@@ -1,0 +1,24 @@
+table {
+    border-spacing: 0;
+    border: 1px solid #9F9F9F;
+    margin: 20px;
+}
+
+th {
+    background-color: #008000;
+}
+
+tr td:last-child {
+    font-weight: bold;
+}
+
+tr:last-child {
+    font-weight: bold;
+    background-color: #E6E6E6;
+}
+
+td,
+th {
+    border: 1px solid #9F9F9F;
+    padding: 5px;
+}

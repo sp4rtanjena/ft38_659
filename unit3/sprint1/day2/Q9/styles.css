@@ -1,0 +1,53 @@
+.heading {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.card {
+    height: 100%;
+    width: 458px;
+    padding: 10px;
+    display: inline-block;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 10px #bebebe;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.card h3 {
+    display: flex;
+    padding: none;
+    margin: none;
+    justify-content: center;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #B6BC60;
+}
+
+.card p,
+h4 {
+    display: flex;
+    padding: none;
+    margin: none;
+    font-family: sans-serif;
+    justify-content: center;
+}
+
+.card .rating {
+    display: flex;
+    padding: none;
+    margin: none;
+    justify-content: center;
+}
+
+
+.checked {
+    color: orange;
+}

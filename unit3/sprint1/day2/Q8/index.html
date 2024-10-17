@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Q9</title>
+</head>
+
+<body>
+    <div class="answer">
+        <h1 class="form-heading">Feedback Form</h1>
+        <div class="feedback-form">
+            <form>
+                <label class="fb-type" for="fb-type">Feedback Type: <br>
+                    <select name="fb-type" id="fb-type">
+                        <option value="compliment">Compliment</option>
+                        <option value="complaint">Complaint</option>
+                        <option value="suggestion">Suggestion</option>
+                        <option value="observation">Observation</option>
+                    </select>
+                </label>
+
+                <br>
+
+                <label class="fb-msg" for="fb-msg">Message:<br>
+                    <input type="text" id="fb-msg">
+                </label>
+
+                <br>
+
+                <label class="web-rat-radio">Website Rating:<br>
+                    <input type="radio" id="rating-5" name="fb-rating" value="5">
+                    <label for="rating-5">Excellent</label>
+                    <input type="radio" id="rating-4" name="fb-rating" value="4">
+                    <label for="rating-4">Good</label>
+                    <input type="radio" id="rating-3" name="fb-rating" value="3">
+                    <label for="rating-3">Average</label>
+                    <input type="radio" id="rating-2" name="fb-rating" value="2">
+                    <label for="rating-2">Poor</label>
+                    <input type="radio" id="rating-1" name="fb-rating" value="1">
+                    <label for="rating-1">Bad</label>
+                </label>
+
+                <br>
+
+                <label class="fb-age" for="fb-age">Age (10-100):<br>
+                    <input type="number" min="10" max="100" id="fb-age">
+                </label>
+
+                <br>
+
+                <label class="fb-email" for="fb-email">Email:<br>
+                    <input type="email" required id="fb-email">
+                </label>
+
+                <br>
+
+                <label class="fb-password" for="fb-password">Password (min. 8 characters):<br>
+                    <input type="password" minlength="8" id="fb-password">
+                </label>
+
+                <br>
+
+                <label class="fb-webURL" for="fb-webURL">Website URL (optional):<br>
+                    <input type="text" id="fb-webURL">
+                </label>
+
+                <br>
+
+                <label class="tnc" for="tnc">
+                    <input type="checkbox" id="tnc"> I agree to the terms and conditions
+                </label>
+
+                <br>
+
+                <button class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
