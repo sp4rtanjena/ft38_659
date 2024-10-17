@@ -1,0 +1,1 @@
+The sole purpose of this repository is to compartmentalize the assignments based on the unit, topics sprint-week and day. This would benefit the accessor to easily go through the required files based on their requirements. 
