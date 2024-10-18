@@ -1,0 +1,308 @@
+body {
+    margin: 0;
+    background-color: #fcfcfc;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 150px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-logo {
+    max-width: 100px;
+    max-height: 100px;
+    background-color: #FFDC35;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar li {
+    margin-bottom: 20px;
+}
+
+.navbar li:first-child {
+    background-color: #ffdc35;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #949494;
+}
+
+.navbar a:hover {
+    color: #000;
+}
+
+/* Left */
+
+section {
+    margin-bottom: 100px;
+}
+
+section .left,
+section .line,
+section .right {
+    display: inline-flex;
+    flex-direction: column;
+    padding-right: 200px;
+}
+
+section h1 {
+    margin: 0;
+    padding-top: 115px;
+    padding-left: 450px;
+    font-size: 50px;
+    font-family: "Montserrat", sans-serif;
+    color: #333333;
+}
+
+section h2 {
+    margin: 0;
+    font-size: 40px;
+    font-family: "Montserrat", sans-serif;
+    color: #333333;
+    padding-bottom: 35px;
+}
+
+section .left {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    padding-left: 450px;
+}
+
+section .left button {
+    border: 0;
+    width: 200px;
+    height: 30px;
+    margin: 20px;
+    margin-left: 0;
+    font-size: 15px;
+    box-shadow: 0 0 1px black;
+}
+
+section .left button:hover {
+    cursor: pointer;
+}
+
+section .left .facebook {
+    color: white;
+    background-color: #3461A0;
+}
+
+section .left .google {
+    color: black;
+    background-color: #ffffff;
+    margin-bottom: 75px;
+}
+
+section .user-login {
+    display: flex;
+    flex-direction: column;
+}
+
+section .user-login label {
+    font-size: 15px;
+    color: #999999;
+    font-family: 'Monsterrat', sans-serif;
+    margin: 0;
+    border: #333333;
+    padding: 10px 10px 10px 0;
+}
+
+section input {
+    width: 425px;
+    height: 60px;
+    border: 2px solid #CCCCCC;
+}
+
+section .user-login button {
+    width: 432px;
+    height: 60px;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: #333333;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-out;
+}
+
+section .user-login button span {
+    color: #FFDC35;
+}
+
+section .user-login button:hover {
+    background-color: #FFDC35;
+    color: #000;
+    cursor: pointer;
+    width: 432px;
+}
+
+/* Add hover yellow effect going left to right and ease in and ease out */
+
+section .user-login a {
+    text-decoration: underline;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    align-items: right;
+    color: #CCCCCC;
+    align-content: right;
+}
+
+.right button {
+    width: 432px;
+    height: 60px;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: #333333;
+    color: #ffffff;
+    border: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 60px;
+    transition: background-color 0.3s ease-out;
+}
+
+
+.right button span {
+    color: #FFDC35;
+}
+
+.right button:hover {
+    background-color: #FFDC35;
+    color: #000;
+    cursor: pointer;
+    width: 432px;
+}
+
+.right .content {
+    font-family: "Montserrat", sans-serif;
+}
+
+.right .content h3 {
+    font-size: 30px;
+    color: #333333;
+}
+
+.right .content ul {
+    padding-left: 0;
+}
+
+.right .content li {
+    padding: 15px 15px 15px 0;
+    width: 450px;
+    font-size: 18px;
+    list-style-type: none
+}
+
+.right .content li img {
+    width: 25px;
+}
+
+/* Footer */
+footer {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    background-color: #3E2B1A;
+    color: #B39D8A;
+    padding: 100px;
+    margin: 10px 250px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.foot-left {
+    width: 30%;
+}
+
+.social-meida-foot {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.social-meida-foot div {
+    margin: 0 10px;
+}
+
+.social-meida-foot img {
+    width: 40px;
+    height: 40px;
+}
+
+.social-meida-foot img:hover {
+    cursor: pointer;
+}
+
+.foot-lang {
+    display: flex;
+    justify-content: center;
+}
+
+.foot-lang div {
+    border: 2px solid #B39D8A;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.foot-lang div:hover {
+    color: #9c7b5d;
+}
+
+.foot-mid {
+    width: 40%;
+    text-align: center;
+}
+
+.foot-mid div {
+    font-size: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.foot-mid div:hover {
+    color: #9c7b5d;
+}
+
+.foot-right {
+    width: 30%;
+    text-align: left;
+}
+
+.foot-right div {
+    font-size: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.foot-right div:hover {
+    color: #9c7b5d;
+}
+
+.contact,
+.cprt,
+.tnc,
+.pri {
+    font-size: 16px;
+}
+
+footer span {
+    font-size: 18px;
+    margin-right: 5px;
+    color: #FFDC35;
+}

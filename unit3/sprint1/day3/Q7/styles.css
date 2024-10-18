@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    transition: all 0.3s ease;
+}
+
+.box:nth-child(3):hover {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
