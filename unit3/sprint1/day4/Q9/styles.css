@@ -1,0 +1,152 @@
+body {
+    background-color: #090B0E;
+    color: #fff;
+    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 50px;
+}
+
+header p:nth-child(1) {
+    color: #7025E2;
+}
+
+.container {
+    display: flex;
+    gap: 40px;
+    padding: 20px 0;
+    background-color: #090B0E;
+    border-radius: 10px;
+}
+
+.plan {
+    background-color: #090B0E;
+    padding: 20px;
+    border-radius: 10px;
+    width: 700px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 5px grey;
+}
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.plan h2 {
+    font-size: 30px;
+    align-content: center;
+}
+
+.plan p {
+    color: grey;
+    font-size: 17px;
+    align-content: center;
+}
+
+.plan .price {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.plan .features {
+    list-style: none;
+    padding: 0;
+}
+
+.plan .features li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: grey;
+}
+
+.plan .features li::before {
+    content: "✓";
+    color: #7025E2;
+}
+
+.plan .button {
+    width: 100%;
+    height: 50px;
+    background-color: #7025E2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    box-shadow: 1px 1px 3px #7025E2;
+}
+
+.plan .button:active {
+    transform: scale(0.98);
+}
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 2px;
+    background-color: #090B0E;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #7025E2;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px#7025E2;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
