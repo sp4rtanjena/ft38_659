@@ -1,0 +1,46 @@
+table {
+    border-spacing: 0;
+    border: 1px solid #9F9F9F;
+    margin: 20px;
+}
+
+th {
+    font-style: italic;
+    font-size: 30px;
+    background-color: #CECECE;
+}
+
+/* tr:nth-child(5n) {
+    font-size: 30px;
+    font-style: italic;
+}
+*/
+tr:nth-child(4n+1) {
+    font-size: 30px;
+    font-style: italic;
+}
+
+tr:nth-child(3n+4):not(:last-child) {
+    font-style: bold;
+    color: green;
+}
+
+tr:first-child {
+    background-color: none;
+    font-weight: normal;
+}
+
+tr td:last-child {
+    font-weight: bold;
+}
+
+tr:last-child {
+    font-weight: bold;
+    background-color: #FFFF00;
+}
+
+td,
+th {
+    border: 1px solid #9F9F9F;
+    padding: 5px;
+}

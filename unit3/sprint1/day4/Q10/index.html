@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Rubik's Cube with Borders, Grey Background, Shadows, and Adjusted Camera</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Scene, Camera, and Renderer
+        const scene = new THREE.Scene()
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
+        const renderer = new THREE.WebGLRenderer()
+        renderer.setSize(window.innerWidth, window.innerHeight)
+        renderer.setClearColor(0x808080)
+        renderer.shadowMap.enabled = true
+        document.body.appendChild(renderer.domElement)
+
+        // Create a ground plane to catch shadows
+        const planeGeometry = new THREE.PlaneGeometry(500, 500)
+        const planeMaterial = new THREE.ShadowMaterial({ opacity: 1 })
+        const plane = new THREE.Mesh(planeGeometry, planeMaterial)
+        plane.rotation.x = -Math.PI / 2
+        plane.position.y = -1
+        plane.receiveShadow = true
+        scene.add(plane)
+
+        // Create a Rubik's Cube with borders
+        const createCube = (x, y, z) => {
+            const geometry = new THREE.BoxGeometry(1, 1, 1);
+            const materials = [
+                new THREE.MeshBasicMaterial({ color: 0xff0000 }), // Red
+                new THREE.MeshBasicMaterial({ color: 0x00ff00 }), // Green
+                new THREE.MeshBasicMaterial({ color: 0x0000ff }), // Blue
+                new THREE.MeshBasicMaterial({ color: 0xffff00 }), // Yellow
+                new THREE.MeshBasicMaterial({ color: 0xffa500 }), // Orange
+                new THREE.MeshBasicMaterial({ color: 0xffffff })  // White
+            ];
+            const cube = new THREE.Mesh(geometry, materials)
+            cube.position.set(x, y, z)
+            cube.castShadow = true
+
+            // Create borders
+            const edges = new THREE.EdgesGeometry(geometry)
+            const lineMaterial = new THREE.LineBasicMaterial({ color: 0x000000 })
+            const lineSegments = new THREE.LineSegments(edges, lineMaterial)
+            cube.add(lineSegments)
+
+            return cube
+        };
+
+        // Create the Rubik's Cube (3x3x3)
+        const rubiksCube = new THREE.Group()
+        for (let x = -1; x <= 1; x++) {
+            for (let y = -1; y <= 1; y++) {
+                for (let z = -1; z <= 1; z++) {
+                    if (Math.abs(x) + Math.abs(y) + Math.abs(z) === 1) {
+                        rubiksCube.add(createCube(x, y, z))
+                    }
+                    if (Math.abs(x) + Math.abs(y) + Math.abs(z) === 2) {
+                        rubiksCube.add(createCube(x, y, z))
+                    }
+                    if (Math.abs(x) + Math.abs(y) + Math.abs(z) === 3) {
+                        rubiksCube.add(createCube(x, y, z))
+                    }
+                }
+            }
+        }
+        scene.add(rubiksCube)
+
+        // Adjust camera position to see three sides
+        camera.position.set(3, 3, 3)
+        camera.lookAt(0, 0, 0)
+
+        // Animation Loop
+        let rotationStep = 0
+        const animate = () => {
+            requestAnimationFrame(animate);
+
+
+            if (rotationStep === 0) {
+                rubiksCube.rotation.x += Math.PI / 180
+                if (rubiksCube.rotation.x >= Math.PI) {
+                    rubiksCube.rotation.x = Math.PI
+                    rotationStep = 1
+                }
+            } else if (rotationStep === 1) {
+                rubiksCube.rotation.y += Math.PI / 180
+                if (rubiksCube.rotation.y >= Math.PI) {
+                    rubiksCube.rotation.y = Math.PI
+                    rotationStep = 0
+                }
+            }
+            renderer.render(scene, camera)
+        };
+        animate()
+    </script>
+</body>
+
+</html>
