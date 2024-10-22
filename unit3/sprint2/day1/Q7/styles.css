@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    justify-items: center;
+    background-color: #F6F6F6;
+}
+
+.chart {
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.chart-item {
+    flex: 0 0 31%;
+    margin: 10px;
+    justify-items: center;
+    padding-bottom: 10px;
+    background-color: #ffffff;
+}
+
+.chart-item:hover {
+    background-color: rgb(255, 244, 244);
+    box-shadow: 1px 1px 2px #000000;
+    cursor: pointer;
+}
+
+.chart-item img {
+    width: 100%;
+}
+
+.chart-item button {
+    width: 100px;
+    height: 30px;
+    background-color: #94D2F6;
+    border: 0;
+    border-radius: 5px;
+}
+
+.chart-item button:hover {
+    background-color: #67bef0;
+    box-shadow: 1px 1px 2px #67bef0;
+    cursor: pointer;
+}
