@@ -1,0 +1,42 @@
+body {
+    width: 1200px;
+    background-color: #4BB1D3;
+}
+
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    padding: 20px;
+    background-color: #292A2F;
+    border-radius: 10px;
+}
+
+.keyboard div {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #2E3538;
+    border: 0;
+    color: #4BB1D3;
+    box-shadow: 0 0 5px black;
+}
+
+.keyboard div:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px black inset, 0 0 5px black inset;
+}
+
+.enter,
+.left-shift {
+    grid-column: 11/13;
+}
+
+.space {
+    grid-column: 5/9;
+}
