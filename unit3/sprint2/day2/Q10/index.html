@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q10</title>
+    <style>
+        body {
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            background-color: #D8BFD8;
+            padding: 10px;
+        }
+
+        .grid-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            border: 2px solid black;
+        }
+
+        .grid-item-1 {
+            grid-column: span 2;
+            background-color: #F9431F;
+        }
+
+        .grid-item-2 {
+            grid-row: span 2;
+            background-color: #FAC7CA;
+        }
+
+        .grid-item-3 {
+            background-color: #000DFE;
+        }
+
+        .grid-item-4 {
+            background-color: #A03D2D;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-item grid-item-1">4</div>
+    <div class="grid-item grid-item-2">6</div>
+    <div class="grid-item grid-item-3">1</div>
+    <div class="grid-item grid-item-4">5</div>
+</body>
+
+</html>
