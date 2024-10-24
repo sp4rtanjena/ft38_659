@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.footer-content {
+    width: 100%;
+    display: inline-flex;
+}
+
+.logo {
+    width: 40%;
+    display: flex;
+    background-color: #02026F;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.logo img {
+    width: 250px;
+    height: auto;
+}
+
+.footer-details {
+    width: 60%;
+    padding: 50px;
+    display: flex;
+    background-color: #3140AF;
+    color: white;
+    justify-content: space-around;
+    font-family: sans-serif;
+}
+
+.footer-details p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-detail ul {
+    padding: 0;
+}
+
+.footer-detail ul li {
+    list-style-type: none;
+    padding: 8px 0;
+}
+
+.footer-end {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: #222222;
+    color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-end-left {
+    width: 15%;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-end-left img {
+    width: auto;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.footer-end-right {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.footer-end-right p {
+    margin: 0 10px;
+}
+
+.footer-end-right p a {
+    color: #ffffff;
+}
+
+@media (max-width:768px) {
+    .footer-content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    .footer-details {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .footer-end-left {
+        display: none;
+    }
+}
+
+@media (max-width:600px) {
+    footer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    .footer-details {
+        width: 100%;
+        display: block;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .footer-details p {
+        padding: 10px;
+    }
+
+    .footer-detail ul {
+        display: none;
+    }
+
+    .footer-end-left {
+        display: none;
+    }
+
+    .footer-end-right {
+        padding: 5px;
+        font-size: 13px;
+    }
+}
