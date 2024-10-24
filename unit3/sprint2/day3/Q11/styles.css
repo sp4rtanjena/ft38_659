@@ -1,0 +1,40 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.show-info {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #FD0202;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px #000000;
+}
+
+.info-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: gold;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: none;
+    z-index: 1;
+}
+
+.show-info:active~.info-box {
+    display: block;
+}
+
+.show-info:active {
+    display: none;
+}
