@@ -1,14 +1,22 @@
 import express from "express"
-import { loginUser, registerUser } from "../controllers/userController.js"
+import { getUserProfile, loginUser, refreshAccessToken, registerUser } from "../controllers/userController.js"
 import passport from "passport"
+import { forgotPassword, resetPassword } from "../controllers/forgotController.js"
+import { authMiddleware } from "../middlewares/authMiddleware.js"
 
 const userRouter = express.Router()
 
-// Register and Login Routes
+// Register and Login Routes*
 userRouter.post("/user/register", registerUser)
 userRouter.post("/user/login", loginUser)
+userRouter.post("/user/refresh-token", refreshAccessToken)
+userRouter.get("/user/profile", authMiddleware, getUserProfile) //frontend
 
-// Google Auth routes
+//Forget and Reset Password *
+userRouter.post("/user/forget-password", forgotPassword)
+userRouter.post("/user/reset-password/:token", resetPassword)
+
+// Google Auth routes * 
 userRouter.get("/user/auth/google", passport.authenticate("google", {
     scope: ["profile", "email"]
 }))

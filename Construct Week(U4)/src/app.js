@@ -5,7 +5,7 @@ import passport from "passport"
 import session from "express-session"
 import { userRouter } from "./api/routes/userRoutes.js"
 import { eventRouter } from "./api/routes/eventRoutes.js"
-import "../src/api/middlewares/passport-setup.js"
+import "./api/middlewares/OAuthMiddleware.js"
 
 dotenv.config()
 
