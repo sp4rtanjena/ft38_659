@@ -1,12 +1,21 @@
-import { google } from 'googleapis'
-import dotenv from 'dotenv'
+import { google } from "googleapis"
+import dotenv from "dotenv"
 
 dotenv.config()
 
-const calendar = google.calendar('v3')
+const getAuthClient = () => {
+    const oauth2Client = new google.auth.OAuth2(
+        process.env.GOOGLE_CLIENT_ID,
+        process.env.GOOGLE_CLIENT_SECRET,
+        process.env.REDIRECT_URI
+    )
+    return oauth2Client
+}
+
+const calendar = google.calendar("v3")
 
 const createEvent = async (auth, eventDetails) => {
-    const calendarId = 'primary'
+    const calendarId = "primary"
     try {
         const event = await calendar.events.insert({
             auth,
@@ -24,7 +33,10 @@ const createEvent = async (auth, eventDetails) => {
                 },
                 reminders: {
                     useDefault: false,
-                    overrides: [{ method: 'popup', minutes: 10080, }, { method: 'popup', minutes: 1440, },],
+                    overrides: [
+                        { method: "popup", minutes: 10080 },
+                        { method: "popup", minutes: 1440 },
+                    ],
                 },
             },
         })
@@ -34,16 +46,4 @@ const createEvent = async (auth, eventDetails) => {
     }
 }
 
-const getAuthClient = () => {
-    const oauth2Client = new google.auth.OAuth2(
-        process.env.GOOGLE_CLIENT_ID,
-        process.env.GOOGLE_CLIENT_SECRET,
-        process.env.REDIRECT_URI
-    )
-    return oauth2Client
-}
-
-export {
-    createEvent,
-    getAuthClient
-}
+export { createEvent, getAuthClient }

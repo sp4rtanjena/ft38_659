@@ -14,9 +14,9 @@ const userSchema = new Schema({
     resetPassTokExp: { type: Date },
     created_at: { type: Date, default: Date.now },
     updated_at: { type: Date, default: Date.now },
-    createdEvents: [{ type: Schema.Types.ObjectId, ref: 'Event' }]
+    createdEvents: [{ type: Schema.Types.ObjectId, ref: "Event" }]
 }, {
-    timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }
+    timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
 })
 
 // Update updated_at everytime the document is modified.

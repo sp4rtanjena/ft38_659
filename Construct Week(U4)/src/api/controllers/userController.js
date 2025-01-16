@@ -59,16 +59,50 @@ const loginUser = async (req, res) => {
 
 const getUserProfile = async (req, res) => {
     try {
-        const user = await userData.findById(req.user._id).populate('createdEvents');
-        if (!user) return res.status(404).json({ msg: "User not found" });
+        const user = await userData.findById(req.user.id).populate("createdEvents")
+        if (!user) return res.status(404).json({ msg: "User not found" })
 
-        console.log('User profile:', user); 
-        return res.status(200).json({ user });
+        console.log("User profile:", user)
+        return res.status(200).json({ user })
     } catch (err) {
-        console.error('Error fetching user profile:', err);
-        return res.status(500).json({ msg: "Error fetching user profile", error: err.message });
+        console.error("Error fetching user profile:", err)
+        return res.status(500).json({ msg: "Error fetching user profile", error: err.message })
     }
-};
+}
+
+const updateUser = async (req, res) => {
+    const { name, email, phone, role } = req.body
+    const userId = req.user.id
+
+    if (!name && !email && !phone && !role) {
+        return res.status(400).json({ msg: "Please provide details to update." })
+    }
+
+    try {
+        const user = await userData.findById(userId)
+        if (!user) return res.status(404).json({ msg: "User not found." })
+        if (name) user.name = name
+        if (email) user.email = email
+        if (phone) user.phone = phone
+        if (role) user.role = role
+
+        await user.save()
+        return res.status(200).json({ msg: "User details updated successfully!", user })
+    } catch (err) {
+        return res.status(500).json({ msg: "Error updating user", error: err.message })
+    }
+}
+
+const deleteUser = async (req, res) => {
+    const userId = req.user.id
+    try {
+        const user = await userData.findByIdAndDelete(userId)
+        if (!user) return res.status(404).json({ msg: "User not found." })
+        return res.status(200).json({ msg: "User deleted successfully!" })
+    } catch (err) {
+        return res.status(500).json({ msg: "Error deleting user", error: err.message })
+    }
+}
 
 
 const refreshAccessToken = async (req, res) => {
@@ -104,4 +138,6 @@ export {
     loginUser,
     refreshAccessToken,
     getUserProfile,
+    updateUser,
+    deleteUser,
 }

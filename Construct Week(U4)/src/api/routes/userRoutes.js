@@ -1,8 +1,9 @@
 import express from "express"
-import { getUserProfile, loginUser, refreshAccessToken, registerUser } from "../controllers/userController.js"
+import { deleteUser, getUserProfile, loginUser, refreshAccessToken, registerUser, updateUser } from "../controllers/userController.js"
 import passport from "passport"
 import { forgotPassword, resetPassword } from "../controllers/forgotController.js"
 import { authMiddleware } from "../middlewares/authMiddleware.js"
+import { userToAdmin } from "../controllers/adminControllers.js"
 
 const userRouter = express.Router()
 
@@ -10,7 +11,9 @@ const userRouter = express.Router()
 userRouter.post("/user/register", registerUser)
 userRouter.post("/user/login", loginUser)
 userRouter.post("/user/refresh-token", refreshAccessToken)
-userRouter.get("/user/profile", authMiddleware, getUserProfile) //frontend
+userRouter.get("/user/profile", authMiddleware, getUserProfile)
+userRouter.put("/user/update", authMiddleware, updateUser)
+userRouter.delete("/user/delete", authMiddleware, deleteUser)
 
 //Forget and Reset Password *
 userRouter.post("/user/forget-password", forgotPassword)
@@ -26,6 +29,9 @@ userRouter.get("/user/auth/google/callback", passport.authenticate("google", {
 }), (req, res) => {
     res.redirect("/")
 })
+
+//Role: User to Admin
+userRouter.put("/user/admin", userToAdmin)
 
 export {
     userRouter
